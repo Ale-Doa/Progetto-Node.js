@@ -103,7 +103,7 @@ L'applicazione è ottimizzata per la scalabilità attraverso:
 
 ## Struttura del Progetto
 ```
-orizon_travel/
+Progetto Node js/
 ├── config/
 │   └── database.js
 ├── controllers/
