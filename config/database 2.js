@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
     try {
         await mongoose.connect('mongodb://localhost:27017/orizon_travel', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
+            serverSelectionTimeoutMS: 5000,
+            socketTimeoutMS: 45000,
+            maxPoolSize: 10,
+            minPoolSize: 2,
+            retryWrites: true,
         });
         console.log('MongoDB Connected Successfully');
     } catch (error) {
